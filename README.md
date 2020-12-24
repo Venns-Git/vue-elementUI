@@ -105,5 +105,64 @@ vue init webpacke element
 </el-button-group>
 ```
 
-# 5. Link文字链接组件
+# 5. Link 文字链接组件
+
+## 5.1文字链接组件的创建
+
+```html
+<el-link>默认链接</el-link>
+```
+
+## 5.2文件链接组件的属性的使用
+
+```html
+<el-link type="primary" :underline="false">默认链接</el-link>
+<el-link type="success" disabled>默认链接</el-link>
+<el-link type="warning" icon="el-icon-platform-eleme">默认链接</el-link>
+<el-link type="danger">默认链接</el-link>
+<el-link type="info">默认链接</el-link>
+```
+
+# 6. Layout (栅格)布局组件的使用
+
+`通过基础的 24 分栏，迅速简便地创建布局`
+
+## 6.1 使用Layout组件
+
+```html
+<el-row>
+	<el-col :span="8">占用8分</el-col>
+    <el-col :span="8">占用8分</el-col>
+    <el-col :span="8">占用8分</el-col>
+</el-row>
+```
+
+注意：
+
+- 在一个布局组件中是由 `row` 和 `col`组合而成
+- 在使用时要区分 row 属性 和 col 属性
+
+## 6.2 属性的使用
+
+- 行属性使用
+
+	```html
+	<el-row :gutter="10" tag="span">
+	        <el-col :span="6"><div style="border:1px solid red">占用6分</div></el-col>
+	        <el-col :span="6"><div style="border:1px solid red">占用6分</div></el-col>
+	        <el-col :span="6"><div style="border:1px solid red">占用6分</div></el-col>
+	        <el-col :span="6"><div style="border:1px solid red">占用6分</div></el-col>
+	</el-row>
+	```
+
+- 列属性的使用
+
+	```html
+	<el-row>
+	        <el-col :span="12" :offset="6" :push="3"><div style="border:1px solid red">占用12分</div></el-col>
+	        <el-col :span="6" ><div style="border:1px solid red">占用6分</div></el-col>
+	</el-row>
+	```
+
+
 

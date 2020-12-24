@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Button from '../components/Button'
 import ButtonDetail from '../components/ButtonDetail'
 import Link from '../components/link'
+import Layout from '../components/Layout'
 
 Vue.use(Router)
 
@@ -18,6 +19,10 @@ export default new Router({
     {
       path: '/link',
       component: Link
+    },
+    {
+      path: '/layout',
+      component: Layout
     }
   ]
 })

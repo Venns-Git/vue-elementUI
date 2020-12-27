@@ -164,5 +164,105 @@ vue init webpacke element
 	</el-row>
 	```
 
+# 7.布局容器组件
 
+## 7.1 创建布局容器
+
+```html
+<el-container>
+
+</el-container>
+```
+
+## 7.2 容器中包含的子元素
+
+```html
+<el-header>：顶栏容器。
+
+<el-aside>：侧边栏容器。
+
+<el-main>：主要区域容器。
+
+<el-footer>：底栏容器。
+```
+
+## 7.3 容器的嵌套使用
+
+```html
+<!-- 创建容器 -->
+<el-container>
+    <!-- header -->
+    <el-header>
+        我是标题
+    </el-header>
+    <!-- 容器的嵌套使用 -->
+    <el-container>
+        <!-- asider -->
+        <el-aside>
+            <!-- aside -->
+            我是菜单
+        </el-aside>
+        <el-main>
+            我是中心内容
+        </el-main>
+    </el-container>
+    <el-footer>
+        我是页脚
+    </el-footer>          
+</el-container>
+```
+
+## 7.4 水平容器
+
+```html
+<!-- 创建容器 -->
+<el-container direction="horizontal">
+    <!-- header -->
+    <el-header>
+        我是标题
+    </el-header>
+    <!-- 容器的嵌套使用 -->
+    <el-container>
+        <!-- asider -->
+        <el-aside>
+            <!-- aside -->
+            我是菜单
+        </el-aside>
+        <el-main>
+            我是中心内容
+        </el-main>
+    </el-container>
+    <el-footer>
+        我是页脚
+    </el-footer>          
+</el-container>
+```
+
+- 注意：子元素中没有 `el-header` 或 `el-footer` 时为 水平排列
+
+## 7.5 垂直容器
+
+```html
+<!-- 创建容器 -->
+<el-container direction="vertical">
+    <!-- header -->
+    <el-header>
+        我是标题
+    </el-header>
+    <!-- 容器的嵌套使用 -->
+    <el-container>
+        <!-- asider -->
+        <el-aside>
+            <!-- aside -->
+            我是菜单
+        </el-aside>
+        <el-main>
+            我是中心内容
+        </el-main>
+    </el-container>
+    <el-footer>
+        我是页脚
+    </el-footer>          
+</el-container>
+```
 

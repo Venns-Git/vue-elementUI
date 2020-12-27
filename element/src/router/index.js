@@ -4,6 +4,7 @@ import Button from '../components/Button'
 import ButtonDetail from '../components/ButtonDetail'
 import Link from '../components/link'
 import Layout from '../components/Layout'
+import Container from '../components/Container'
 
 Vue.use(Router)
 
@@ -23,6 +24,10 @@ export default new Router({
     {
       path: '/layout',
       component: Layout
+    },
+    {
+      path: '/container',
+      component: Container
     }
   ]
 })

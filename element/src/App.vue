@@ -5,6 +5,7 @@
     <a href="#/link">文字链接组件</a>
     <a href="#/layout">布局组件</a>
     <a href="#/container">容器布局组件的使用</a>
+    <a href="#/radio">Radio组件的使用</a>
     <br /><br /><hr />
     <router-view/>
   </div>

@@ -266,3 +266,84 @@ vue init webpacke element
 </el-container>
 ```
 
+# 8. Form相关组件
+
+## 8.1 Radio单选按钮
+
+### 1. 创建按钮
+
+```html
+<!-- 组件的创建 -->
+<el-radio label="男" v-model="label">男</el-radio>
+<el-radio label="女" v-model="label">女</el-radio>
+<script>
+export default {
+    name: 'Radio',
+    data(){
+        return{
+            lable: '男',
+        }
+    }
+}
+</script>
+```
+
+- 注意：在使用radio单选按钮时至少加入`v-model`和`label`属性
+
+### 2. Radio属性的使用
+
+```html
+<el-radio label="男" name="sex" v-model="label" disabled>男</el-radio>
+<el-radio label="女" name="sex" v-model="label" border size="small">女</el-radio>
+<el-radio label="女" v-model="label" border size="mini">女</el-radio>
+<el-radio label="女" v-model="label" border size="medium">女</el-radio>
+```
+
+- 总结：属性使用还是截至写在对应的组件标签上 以 属性名=属性值 方式使用
+
+### 3. Radio事件的使用
+
+```html
+<el-radio label="男" name="sex" @change="aa" v-model="label">男</el-radio>
+<el-radio label="女" name="sex" @change="aa" v-model="label" border size="small">女</el-radio>
+<script>
+export default {
+    name: 'Radio',
+    data(){
+        return{
+            label: '男'
+        }
+    },
+    methods:{
+        aa(){ //定义的事件处理函数
+            alert(this.label);
+        }
+    }
+}
+</script>
+```
+
+- 事件的使用也适合属性使用是一致的，都是直接俄写在对应的组件标签上
+- 事件的使用必须使用vue中绑定事件方式进行使用 如：@事件名=事件处理函数(vue组件中对应函数)
+
+### 4. Radio单选按钮组
+
+```html
+<!-- 创建单选按钮组 -->
+<el-radio-group v-model="radio">
+    <el-radio :label="3">备选项</el-radio>
+    <el-radio :label="6">备选项</el-radio>
+    <el-radio :label="9">备选项</el-radio>
+</el-radio-group>
+<script>
+export default {
+    name: 'Radio',
+    data(){
+        return{
+            radio: 3
+        }
+    }
+}
+</script>
+```
+

@@ -5,6 +5,7 @@ import ButtonDetail from '../components/ButtonDetail'
 import Link from '../components/link'
 import Layout from '../components/Layout'
 import Container from '../components/Container'
+import Radio from '../components/Radio';
 
 Vue.use(Router)
 
@@ -28,6 +29,10 @@ export default new Router({
     {
       path: '/container',
       component: Container
+    },
+    {
+      path: '/radio',
+      component: Radio
     }
   ]
 })

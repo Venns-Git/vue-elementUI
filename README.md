@@ -16,13 +16,13 @@ vue init webpacke element
 
 ```markdown
 # 1.下载ElementUI依赖
-	npm i element-ui -S
+npm i element-ui -S
 # 2.指定当前项目中使用elementUI
-	import 'element-ui/lib/theme-chalk/index.css';
-	import ElementUI from 'element-ui';
-	
-	//在vue脚手架中使用elementUI
-	Vue.use(ElementUI);
+import 'element-ui/lib/theme-chalk/index.css';
+import ElementUI from 'element-ui';
+
+//在vue脚手架中使用elementUI
+Vue.use(ElementUI);
 ```
 
 # 3.按钮组件
